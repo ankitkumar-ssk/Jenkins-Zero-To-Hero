@@ -25,7 +25,6 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -67,10 +66,15 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-                   
+
+            <!-- SonarQube Plugin compatible with Java 11 -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version> <!-- Older version compatible with Java 11 -->
+            </plugin>
 
         </plugins>
     </build>
-
 
 </project>
